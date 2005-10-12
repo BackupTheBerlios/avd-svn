@@ -1,0 +1,4 @@
+
+BuildDir('build/default/', 'src/', duplicate=0)
+
+SConscript('build/default/SConscript')

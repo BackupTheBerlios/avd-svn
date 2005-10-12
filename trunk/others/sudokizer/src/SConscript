@@ -1,0 +1,4 @@
+
+env = Environment()
+#env.Append(LIBS=['m'])
+env.Program(target='sudokizer', source=['sudokizer.cpp', 'sudoku.cpp'])

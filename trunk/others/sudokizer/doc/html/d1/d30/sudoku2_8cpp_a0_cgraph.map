@@ -1,0 +1,9 @@
+base referer
+rect $d4/d99/classsudoku_1_1Solver.html#a1 108,32 268,56
+rect $de/dc3/classsudoku_1_1Display.html#a1 110,80 265,104
+rect $d4/d99/classsudoku_1_1Solver.html#h0 346,8 517,32
+rect $d4/d99/classsudoku_1_1Solver.html#d0 318,56 545,80
+rect $d0/d38/classsudoku_1_1Line.html#a1 596,8 777,32
+rect $de/d54/classsudoku_1_1Box.html#a1 597,56 776,80
+rect $d8/d1c/classsudoku_1_1Cell.html#a6 626,104 746,128
+rect $d8/d1c/classsudoku_1_1Cell.html#a8 610,152 762,176

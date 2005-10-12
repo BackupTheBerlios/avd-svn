@@ -1,0 +1,31 @@
+To create tests:
+	
+* Don't add #include "filename.moc" at the end of the file because that method doesn't seem to work
+
+* Basically, ignore what is said in the QtTestLIb tutorial and the QtTestLib documentation. It's wrong from the very beginning, the install+compilation README; The INSTALL.txt was wrong, and the tutorials too.
+
+ - In order to successfully install QtTestLib, I needed to add this to the src/src.pro file:
+<blockquote>
+INCLUDEPATH += . /path/to/qt4/qt-x11-opensource-src-4.0.1/include/
+<blockquote>
+
+ - In order to create a test, you need to avoid adding #include "filename.moc" at the end of the file because that method doesn't seem to work. Instead, create a header file (.h) with the definition of your test classes, and just include it in you cpp, where you implement the functions previously defined.
+ 
+ - Once you have your tests, in order to compile them it's needed to create the Makefile and the project file (dirname.pro):
+<blockquote>
+qmake -project CONFIG+=qttest // NOTE that you need to add CONFIG+=qttest, despite it's not mentioned in the tutorials
+qmake -unix -o Makefile dirname.pro
+qmake
+<blockquote>
+
+That what you need to do to initiliase the  building system, which by now it's unfortunately qmake and Makefiles since I haven't found how to do that with scons yet. Every cpp file inside your current dir (whose name must substitute dirname in those commands) will be part of the tests. Obviously, you can only have one main function (automagically created calling to QTTEST_MAIN()) so be careful with that. Once initialised the building system, you can compile your tests at any time by executing:
+
+<blockquote>
+make
+<blockquote>
+
+and then execute the tests is done by executting the created executable:
+	
+<blockquote>
+./dirname
+<blockquote>
