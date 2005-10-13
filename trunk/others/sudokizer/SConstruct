@@ -1,4 +1,4 @@
 
 BuildDir('build/default/', 'src/', duplicate=0)
+SConscript('build/default/SConscript', exports='COMMAND_LINE_TARGETS')
 
-SConscript('build/default/SConscript')

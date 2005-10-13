@@ -1,4 +1,13 @@
+Import('COMMAND_LINE_TARGETS')
 
 env = Environment()
 #env.Append(LIBS=['m'])
-env.Program(target='sudokizer', source=['sudokizer.cpp', 'sudoku.cpp'])
+install_dir='/usr/local/bin/'
+
+# to compile
+sudokizer = env.Program(target='sudokizer', source=['sudokizer.cpp', 'sudoku.cpp'])
+
+# to install
+env.Install(install_dir, sudokizer)
+env.Alias('install', install_dir)
+

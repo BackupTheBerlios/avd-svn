@@ -2,8 +2,6 @@
  1. System-wide installation
  ---------------------------
 
- WARNING: You may not need to compile sudokizer, as some binaries can be found in our webpage [1].
-
  To compile & install sudokizer, execute this command inside the directory sudokizer/, first run
  the compilation command:
 
@@ -20,19 +18,19 @@
  -----------------
 
  Sudokizer is available as the command "sudokizer" and is installed in /usr/bin. To execute it
- just use the mentioned command:
+ just launch the mentioned command in a terminal:
 
 	$ sudokizer
 
  3. How to remove
  ----------------
  
- You can remove/uninstall sudokizer from your system executing the following command:
+ You can remove/uninstall sudokizer from your system executing the following command within the sources:
 
-	$ sudo sudokizer remove
+	$ sudo scons -c install
 
- Note that it might ask you for your root  or user password depending on your system
+ Note that it might ask you for your root or user password depending on your system
  settings.
 
 --
-[1] http://
+[1] http://developer.berlios.de/projects/avd/
